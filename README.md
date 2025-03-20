@@ -23,7 +23,7 @@ AllyNet aims to address barriers faced by underserved communities by:
 
 ---
 ## ** Pitch Deck **
-[View the Pitch Deck](file:///C:/Users/prina/OneDrive/Documents/pitch%20deck/team%20S16-with%20specific%20name%20Hack-Her-Space.pdf)
+[View the Pitch Deck](https://github.com/ami798/She-Codes-Hackathon/blob/main/AllyNet%20pitch%20deck.pdf)
 
 
 ## **Demo and Prototype**
