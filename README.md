@@ -39,8 +39,8 @@ The prototype showcases:
 
 ---
 
-## **Team Name: [Insert Your Team Name Here]**
-We are Hack-Her-Space, a dynamic group of innovators committed to leveraging technology for meaningful impact. This project was crafted for the **[Hackathon Name]** and represents our shared passion for empowering underserved communities.
+## **Team Name: Hack-Her-Space**
+We are Hack-Her-Space, a dynamic group of innovators committed to leveraging technology for meaningful impact. This project was crafted for the **She Codes Hackathon** and represents our shared passion for empowering underserved communities.
 
 ---
 ## **Contributing**
