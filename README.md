@@ -22,13 +22,12 @@ AllyNet aims to address barriers faced by underserved communities by:
 - Providing a safe and inclusive digital space for connection and empowerment.
 
 ---
-<<<<<<< HEAD
 =======
 ## **Pitch Deck**
 [View the Pitch Deck](https://github.com/ami798/She-Codes-Hackathon/blob/main/AllyNet%20pitch%20deck.pdf)
 
 
->>>>>>> ebf49b0db658cd1a92b7d65cd4be24c388ffb9e8
+
 ## **Demo and Prototype**
 Visit our demo [here](#) 
 
