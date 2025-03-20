@@ -22,10 +22,6 @@ AllyNet aims to address barriers faced by underserved communities by:
 - Providing a safe and inclusive digital space for connection and empowerment.
 
 ---
-# ** Pitch Deck **
-View the Pitch Deck (PDF)[file:///C:/Users/prina/OneDrive/Documents/fg/She-Codes-Hackathon/AllyNet%20pitch%20deck.pdf]
-
-
 ## **Demo and Prototype**
 Visit our demo [here](#) 
 
@@ -52,3 +48,23 @@ We welcome contributions to AllyNet! If you're interested in collaborating, feel
 This project is licensed under the MIT License.
 # **Contact**
 For questions or feedback, feel free to reach out:
+
+## **Visit our pitch deck**
+![Slide 1](c:\Users\prina\AppData\Local\Temp\4d9e170c-f6c7-4fa6-bdbf-6c072069035f_ilovepdf_pages-to-jpg (1).zip.35f\AllyNet pitch deck_page-0001.jpg)
+![Slide 2]()
+![Slide 1]()
+![Slide 2](./path-to-slide2.png)
+![Slide 1](./path-to-slide1.png)
+![Slide 2](./path-to-slide2.png)
+![Slide 1](./path-to-slide1.png)
+![Slide 2](./path-to-slide2.png)
+![Slide 1](./path-to-slide1.png)
+![Slide 2](./path-to-slide2.png)
+![Slide 1](./path-to-slide1.png)
+![Slide 2](./path-to-slide2.png)
+![Slide 1](./path-to-slide1.png)
+![Slide 2](./path-to-slide2.png)
+![Slide 1](./path-to-slide1.png)
+![Slide 2](./path-to-slide2.png)
+
+
