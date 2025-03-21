@@ -29,7 +29,7 @@ AllyNet aims to address barriers faced by underserved communities by:
 
 
 ## **Demo and Prototype**
-Visit our demo [https://drive.google.com/file/d/1DLpwiKsWlyKahM_RPID1ictbQPdgQzKG/view?usp=drive_link](#) 
+[Visit our demo] (https://drive.google.com/file/d/1DLpwiKsWlyKahM_RPID1ictbQPdgQzKG/view?usp=drive_link)
 
 The prototype showcases:
 - A responsive web platform featuring an engaging user interface.
