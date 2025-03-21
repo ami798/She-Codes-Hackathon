@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllyNet - Empowering Women</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Teachers:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        :root {
+            --primary-color: #EE5D99;
+            --text-color-white: #FFFFFF;
+            --text-color-gray: #FFFFFF99;
+            --heading-font: 'Teachers', 'Helvetica', sans-serif;
+            --body-font: 'Inter', 'Helvetica', sans-serif;
+            --default-black: #000000;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --card-background: #FFFFFF;
+            --card-border-radius: 10px;
+            --progress-bar-background: #F8F9FA;
+            --progress-bar-fill: var(--primary-color);
+            --button-hover-color: #D94B87;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--body-font);
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: var(--default-black);
+            color: var(--text-color-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        header .logo {
+            font-family: var(--body-font);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.2s ease;
+        }
+
+        header .logo:hover {
+            transform: scale(1.05);
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header nav a {
+            color: var(--text-color-gray);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: var(--text-color-white);
+        }
+
+        header nav a.active {
+            color: var(--text-color-white);
+            font-weight: bold;
+        }
+
+        header .donate-button {
+            background-color: var(--primary-color);
+            color: var(--text-color-white);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        header .donate-button:hover {
+            background-color: var(--button-hover-color);
+            transform: scale(1.05);
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .programs-hero-section {
+            background-image: url("https://c.animaapp.com/m8insw4p6dl1NR/img/hero-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color-white);
+            text-align: center;
+        }
+
+        .programs-hero-section h1 {
+            font-family: var(--heading-font);
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .programs-hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+            color: var(--text-color-white);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .latest-programs-section {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .latest-programs-section h2 {
+            font-size: 2.5rem;
+            font-family: var(--heading-font);
+            margin-bottom: 40px;
+            color: var(--default-black);
+        }
+
+        .program-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .program-card {
+            background-color: var(--card-background);
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .program-card .card-content img {
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .program-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--default-black);
+        }
+
+        .program-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .program-card .progress-bar {
+            background-color: var(--progress-bar-background);
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card .progress-bar-fill {
+            background-color: var(--progress-bar-fill);
+            height: 100%;
+            border-radius: 4px;
+            width: 0;
+            transition: width 0.5s ease;
+            position: relative;
+        }
+
+        .program-card .progress-bar-fill::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+            background-size: 16px 16px;
+            animation: move 1s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 16px 0;
+            }
+        }
+
+        .program-card .view-details-button {
+            background-color: var(--default-black);
+            color: var(--text-color-white);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+            align-self: flex-start;
+            border: none;
+            cursor: pointer;
+        }
+
+        .program-card .view-details-button:hover {
+            background-color: var(--button-hover-color);
+            transform: scale(1.05);
+        }
+
+        .all-programs-button {
+            background-color: transparent;
+            color: var(--default-black);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+            border: 2px solid var(--default-black);
+            margin-top: 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .all-programs-button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--default-black);
+            color: var(--text-color-white);
+            padding: 60px 30px;
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        footer .top-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        footer .logo-description {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 300px;
+        }
+
+        footer .logo-description .logo {
+            font-family: var(--body-font);
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        footer .logo-description p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-color-gray);
+        }
+
+        footer .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        footer .contact-info p {
+            font-size: 0.9rem;
+        }
+
+        footer .contact-info span {
+            font-weight: bold;
+            color: var(--text-color-white);
+        }
+
+        footer .links-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        footer .links-section h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        footer .links-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .links-section li {
+            margin-bottom: 10px;
+        }
+
+        footer .links-section a {
+            color: var(--text-color-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .links-section a:hover {
+            color: var(--text-color-white);
+        }
+
+        footer .language-options {
+            font-size: 0.9rem;
+            color: var(--text-color-white);
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .programs-hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .programs-hero-section p {
+                font-size: 1rem;
+            }
+
+            .latest-programs-section {
+                padding: 40px 20px;
+            }
+
+            .program-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer .top-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            footer {
+                padding: 40px 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .programs-hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .programs-hero-section p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ALLYNET</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#" class="active">Programs</a>
+            <a href="#">Connect</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <a href="#" class="donate-button">DONATE</a>
+    </header>
+
+    <main>
+        <section class="programs-hero-section">
+            <h1>Programs</h1>
+            <p>Grow Your Mindset And Level Up With Our Mentorship Programs</p>
+        </section>
+
+        <section class="latest-programs-section">
+            <h2>Latest Programs</h2>
+            <div class="program-cards-grid">
+                <div class="program-card">
+                    <div class="card-content">
+                        <img src="https://c.animaapp.com/m8insw4p6dl1NR/img/alx-logo.png" alt="ALX AFRICA logo">
+                        <h3>ALX AFRICA</h3>
+                        <p>Dolor donec eget nunc nisl. Eu ut et enim ornare nisl vel auctor odio a. Curabitur porttitor quis gravida porttitor vel.</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" data-progress="30"></div>
+                        </div>
+                     </div>
+                    <a href="#" class="view-details-button">VIEW DETAILS</a>
+                </div>
+                <div class="program-card">
+                    <div class="card-content">
+                        <img src="https://c.animaapp.com/m8insw4p6dl1NR/img/a2sv-logo.png" alt="AFRICA TO SILICON VALLEY logo">
+                        <h3>AFRICA TO SILICON VALLEY</h3>
+                        <p>Dolor donec eget nunc nisl. Eu ut et enim ornare nisl vel auctor odio a. Curabitur porttitor quis gravida porttitor vel.</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" data-progress="40"></div>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details-button">VIEW DETAILS</a>
+                </div>
+                <div class="program-card">
+                    <div class="card-content">
+                        <img src="https://c.animaapp.com/m8insw4p6dl1NR/img/shecodes-logo.png" alt="SHE CODES logo">
+                        <h3>SHE CODES</h3>
+                        <p>Dolor donec eget nunc nisl. Eu ut et enim ornare nisl vel auctor odio a. Curabitur porttitor quis gravida porttitor vel.</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" data-progress="20"></div>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details-button">VIEW DETAILS</a>
+                </div>
+                <div class="program-card">
+                    <div class="card-content">
+                        <img src="https://c.animaapp.com/m8insw4p6dl1NR/img/empower-africa-logo.png" alt="EMPOWER AFRICA logo">
+                        <h3>EMPOWER AFRICA</h3>
+                        <p>Dolor donec eget nunc nisl. Eu ut et enim ornare nisl vel auctor odio a. Curabitur porttitor quis gravida porttitor vel.</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" data-progress="50"></div>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details-button">VIEW DETAILS</a>
+                </div>
+                <div class="program-card">
+                    <div class="card-content">
+                        <img src="https://c.animaapp.com/m8insw4p6dl1NR/img/innovate-her-logo.png" alt="INNOVATE HER logo">
+                        <h3>INNOVATE HER</h3>
+                        <p>Dolor donec eget nunc nisl. Eu ut et enim ornare nisl vel auctor odio a. Curabitur porttitor quis gravida porttitor vel.</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" data-progress="35"></div>
+                        </div>
+                      </div>
+                    <a href="#" class="view-details-button">VIEW DETAILS</a>
+                </div>
+                <div class="program-card">
+                    <div class="card-content">
+                        <img src="https://c.animaapp.com/m8insw4p6dl1NR/img/aastu-sea-logo.png" alt="AASTU SEA logo">
+                        <h3>AASTU SEA</h3>
+                        <p>Dolor donec eget nunc nisl. Eu ut et enim ornare nisl vel auctor odio a. Curabitur porttitor quis gravida porttitor vel.</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" data-progress="45"></div>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details-button">VIEW DETAILS</a>
+                </div>
+            </div>
+            <a href="#" class="all-programs-button">ALL PROGRAMS</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="top-section">
+            <div class="logo-description">
+                <div class="logo">
+                    <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/xmlid-647-.png" alt="Logo">
+                    <span>ALLYNET</span>
+                </div>
+                <p>Explore a gateway to knowledge and growth, where every step leads to new opportunities. Discover tailored courses, connect with inspiring mentors, and unlock your potential. Join a community that empowers you to achieve your dreams. Together, we build a future filled with success, learning, and collaboration</p>
+                <div class="contact-info">
+                    <p><span>Phone:</span> 9999999999</p>
+                    <p><span>Address:</span> 123 Address st, <br>Addis Ababa, Ethiopia</p>
+                </div>
+            </div>
+            <div class="links-section">
+                <h4>LANGUAGE</h4>
+                <div class="language-options">
+                    English<br>Amharic
+                </div>
+            </div>
+            <div class="links-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Volunteers</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="links-section">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">F.A.Q</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        ScrollReveal().reveal('.programs-hero-section h1', { delay: 500, distance: '50px', origin: 'top' });
+        ScrollReveal().reveal('.programs-hero-section p', { delay: 700, distance: '50px', origin: 'bottom' });
+        ScrollReveal().reveal('.latest-programs-section h2', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.program-card', {
+            interval: 200,
+            origin: 'bottom',
+        });
+
+        const progressBarFills = document.querySelectorAll('.progress-bar-fill');
+        progressBarFills.forEach(fill => {
+            const progress = fill.getAttribute('data-progress');
+            fill.style.width = `${progress}%`;
+        });
+    </script>
+</body>
+</html>
