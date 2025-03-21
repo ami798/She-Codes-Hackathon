@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllyNet - Empowering Women</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Teachers:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        :root {
+            --primary-color: #EE5D99;
+            --text-color-white: #FFFFFF;
+            --text-color-gray: #FFFFFF99;
+            --heading-font: 'Teachers', 'Helvetica', sans-serif;
+            --body-font: 'Inter', 'Helvetica', sans-serif;
+            --default-black: #000000;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--body-font);
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: var(--default-black);
+            color: var(--text-color-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        header .logo {
+            font-family: var(--body-font);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.2s ease;
+        }
+
+        header .logo:hover {
+            transform: scale(1.05);
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header nav a {
+            color: var(--text-color-gray);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: var(--text-color-white);
+        }
+
+        header nav a.active {
+            color: var(--text-color-white);
+            font-weight: bold;
+        }
+
+        header .donate-button {
+            background-color: var(--primary-color);
+            color: var(--text-color-white);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        header .donate-button:hover {
+            background-color: #D94B87;
+            transform: scale(1.05);
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 842px;
+            padding-left: 135px;
+            padding-right: 312px;
+            background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://c.animaapp.com/m8ik2fxtPu4Wid/img/image.png");
+            background-size: cover;
+            background-position: center;
+            color: var(--text-color-white);
+            width: 100%;
+        }
+
+        .hero-section h1 {
+            font-family: var(--heading-font);
+            font-size: 4rem;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease, slideInLeft 1s ease;
+            transform: translateX(-50px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-50px); }
+            to { transform: translateX(0); }
+        }
+
+
+        .hero-section .statistics {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .hero-section .statistics div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-section .statistics span {
+            font-family: var(--heading-font);
+            font-size: 1.75rem;
+            color: var(--primary-color);
+        }
+
+        .hero-section .statistics p {
+            font-size: 1rem;
+        }
+
+        .features-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #F8F9FA;
+            padding: 50px 70px;
+        }
+
+        .features-section .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .features-section .feature-item img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .features-section .feature-item img:hover {
+            transform: scale(1.2);
+        }
+
+        .features-section .feature-item .content {
+            flex: 1;
+        }
+
+        .features-section .feature-item h3 {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            color: var(--default-black);
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .features-section .feature-item h3:hover {
+            color: var(--primary-color);
+        }
+
+        .features-section .feature-item p {
+            font-size: 1rem;
+            color: #00000099;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .about-us-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 120px 312px;
+            width: 100%;
+            gap: 60px;
+        }
+
+        .about-us-section .section-title {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-top: 40px;
+            max-width: 808px;
+            text-align: center;
+            font-family: var(--heading-font);
+            color: var(--default-black);
+        }
+
+        .about-us-section .cards {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .about-us-section .card {
+            width: 411px;
+            height: 421px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+
+        .about-us-section .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-us-section .card .image-wrapper {
+            position: absolute;
+            inset: 0;
+        }
+
+        .about-us-section .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .about-us-section .card img:hover {
+            transform: scale(1.1);
+        }
+
+        .about-us-section .card .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .about-us-section .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .about-us-section .card .content {
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .about-us-section .card h3 {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            color: var(--text-color-white);
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+         .about-us-section .card h3:hover {
+            color: var(--primary-color);
+        }
+
+        .about-us-section .card p {
+            font-size: 1rem;
+            color: var(--text-color-white);
+            margin-bottom: auto;
+        }
+
+        .about-us-section .card button {
+            margin-top: auto;
+            background-color: var(--text-color-white);
+            color: var(--default-black);
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .about-us-section .card button:hover {
+            background-color: #F0F0F0;
+            transform: scale(1.1);
+        }
+
+        .latest-programs-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 312px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .latest-programs-section h2 {
+            font-family: var(--heading-font);
+            font-size: 3.125rem;
+            text-align: center;
+            color: var(--default-black);
+            margin-bottom: 0;
+        }
+
+        .latest-programs-section button {
+            background-color: transparent;
+            color: var(--default-black);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: 2px solid var(--default-black);
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 0;
+        }
+
+        .latest-programs-section button:hover {
+            background-color: #F0F0F0;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--default-black);
+            color: var(--text-color-white);
+            padding: 60px 312px;
+            width: 100%;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        footer .top-section {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        footer .logo-description {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 303px;
+        }
+
+        footer .logo-description .logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        footer .logo-description p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--text-color-gray);
+        }
+
+        footer .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        footer .contact-info p {
+            font-size: 1rem;
+        }
+
+        footer .contact-info span {
+            font-weight: bold;
+            color: var(--text-color-white);
+        }
+
+        footer .links-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        footer .links-section h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        footer .links-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .links-section li {
+            margin-bottom: 10px;
+        }
+
+        footer .links-section a {
+            color: var(--text-color-gray);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .links-section a:hover {
+            color: var(--text-color-white);
+        }
+
+        footer .language-options {
+            font-size: 1rem;
+            color: var(--text-color-white);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-section {
+                padding-left: 50px;
+                padding-right: 50px;
+                text-align: center;
+            }
+
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+
+            .hero-section .statistics {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .features-section {
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px;
+            }
+
+            .about-us-section {
+                padding: 60px 20px;
+            }
+
+            .about-us-section .cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .about-us-section .card {
+                width: 100%;
+            }
+
+            .latest-programs-section {
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            footer {
+                padding: 60px 20px;
+            }
+
+            footer .top-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+            footer .links-section{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ALLYNET</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Programs</a>
+            <a href="#">Connect</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <a href="#" class="donate-button">DONATE</a>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Empower Your Future <br>Learn, Connect, Succeed</h1>
+            <div class="statistics">
+                <div>
+                    <span>$1 284 528</span>
+                    <p>Donation</p>
+                </div>
+                <div>
+                    <span>12 460</span>
+                    <p>Women Placed In Stem Careers</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-item">
+                <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/outline---screen.svg" alt="Career Classes">
+                <div class="content">
+                    <h3>Career Classes</h3>
+                    <p>Learn how to grow your career from successful women</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/clip-path-group.png" alt="Education">
+                <div class="content">
+                    <h3>Education</h3>
+                    <p>Tailor-made courses</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/outline---trophy.svg" alt="Scholarships">
+                <div class="content">
+                    <h3>Scholarships</h3>
+                    <p>Financial + educational scholarships</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/vector.svg" alt="Mentorships">
+                 <div class="content">
+                    <h3>Mentorships</h3>
+                    <p>Get mentorship from incredible women</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us-section">
+            <h2 class="section-title">We're building a world where women lead, thrive, and are equally represented in every field.</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="image-wrapper">
+                         <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/unsplash-cveoh-jjmee.png" alt="Renewable Tech Bootcamp">
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h3>Renewable Tech Bootcamp</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+                <div class="card">
+                     <div class="image-wrapper">
+                         <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/unsplash-iigovkrty8g.png" alt="Women in Data Science">
+                     </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h3>Women in Data Science</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-wrapper">
+                        <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/unsplash-1-aa2fadydc.png" alt="Scholarship Program: Rural areas">
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h3>Scholarship Program: Rural areas</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-programs-section">
+            <h2>Latest Programs</h2>
+            <button>MORE PROGRAMS</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="top-section">
+            <div class="logo-description">
+                <div class="logo">
+                    <img src="https://c.animaapp.com/m8ik2fxtPu4Wid/img/xmlid-647-.png" alt="Logo">
+                    <span>ALLYNET</span>
+                </div>
+                <p>Explore a gateway to knowledge and growth, where every step leads to new opportunities. Discover tailored courses, connect with inspiring mentors, and unlock your potential. Join a community that empowers you to achieve your dreams. Together, we build a future filled with success, learning, and collaboration</p>
+                <div class="contact-info">
+                    <p><span>Phone:</span> 9999999999</p>
+                    <p><span>Address:</span> 123 Address st, <br>Addis Ababa, Ethiopia</p>
+                </div>
+            </div>
+            <div class="links-section">
+                <h4>LANGUAGE</h4>
+                <div class="language-options">
+                    English<br>Amharic
+                </div>
+            </div>
+            <div class="links-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Volunteers</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="links-section">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">F.A.Q</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        ScrollReveal().reveal('.hero-section h1', { delay: 500, distance: '50px', origin: 'left' });
+        ScrollReveal().reveal('.hero-section .statistics', { delay: 700, origin: 'bottom' });
+        ScrollReveal().reveal('.features-section .feature-item', {
+            interval: 200,
+            origin: 'bottom',
+        });
+        ScrollReveal().reveal('.about-us-section .section-title', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.about-us-section .cards .card', {
+            interval: 300,
+            origin: 'bottom',
+        });
+        ScrollReveal().reveal('.latest-programs-section h2', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.latest-programs-section button', { delay: 700, origin: 'right' });
+    </script>
+</body>
+</html>
