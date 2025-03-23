@@ -30,7 +30,11 @@ AllyNet aims to address barriers faced by underserved communities by:
 design[https://www.figma.com/proto/5nAybn0bUnDBFoGikDVPxx/AllyNet-prototype-design1?node-id=23-2127&p=f&t=tJKkUnvLUv41vi1G-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A1055&show-proto-sidebar=1]
 
 ## **Demo and Prototype**
+<<<<<<< HEAD
 Visit our demo [https://drive.google.com/file/d/1DLpwiKsWlyKahM_RPID1ictbQPdgQzKG/view?usp=drive_link]
+=======
+[Visit our demo] (https://drive.google.com/file/d/1DLpwiKsWlyKahM_RPID1ictbQPdgQzKG/view?usp=drive_link)
+>>>>>>> 32190265f46b5065b1f9237b2e9e9bcc5118069d
 
 The prototype showcases:
 - A responsive web platform featuring an engaging user interface.
