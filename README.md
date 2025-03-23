@@ -26,6 +26,8 @@ AllyNet aims to address barriers faced by underserved communities by:
 ## **Pitch Deck**
 [View the Pitch Deck](https://github.com/ami798/She-Codes-Hackathon/blob/main/AllyNet%20pitch%20deck.pdf)
 
+---
+
 ## **UI/UX Design**
 [design](https://www.figma.com/proto/5nAybn0bUnDBFoGikDVPxx/AllyNet-prototype-design1?node-id=23-2127&p=f&t=tJKkUnvLUv41vi1G-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A1055&show-proto-sidebar=1)
 
